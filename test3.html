@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс 3</title>
+    <style>
+        body{
+            max-width: 1440px;
+            margin: 0 auto;
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #B4B4B4;
+        }
+        header{
+            margin-top: 15px;
+            h1{
+                text-align: center;
+            }
+        }
+
+        main{
+            .container{
+                border: 2px solid #6C6C6C;
+                border-bottom: 0px;
+                h2{
+                    text-align: center;
+                    padding: 15px;
+                    
+                }
+                .grid{
+                    font-size: 18px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    .grid-text_one{
+                        padding: 15px;
+                        border: 2px solid #6C6C6C;
+                        border-left: 0px;
+                        border-right: 1px;
+                        border-bottom: 0px;
+                    }
+                    .grid-text_two{
+                        padding: 15px;  
+                        border: 2px solid #6C6C6C;
+                        border-right: 0px;
+                        border-bottom: 0px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1000px){
+            body{
+
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 300px;
+            }
+            h1{
+                font-size: 20px;
+            }
+        }
+
+        main{
+            .container{
+                h2{
+                    font-size: 18px;
+                    margin: 0;
+                }
+                .grid{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    .grid-text_one{
+                        
+                    }
+                    .grid-text_two{
+
+                    }
+                }
+            }
+        }
+        }
+        footer{
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./logo.svg" alt="logo">
+        <h1>Основы CSS</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>
+                CSS (Cascading Style Sheets) — язык стилей для оформления HTML-документов. Он разделяет содержание и оформление, делая страницы более управляемыми и адаптивными.
+                <br>
+                Стилизация веб-страниц
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Селекторы, свойства, значения
+                    <br>
+                    <br>
+                    Селекторы: Выбирают элементы для стилизации.
+                        <br>
+                        <br>
+                    Типовые: p { color: blue; } (все &lt;p&gt;).
+                        <br>
+                    Классы: .classname { color: red; } (элементы с классом).
+                        <br>
+                    ID: #idname { color: green; } (элемент с ID).
+                        <br>
+                    Атрибуты: [type="text"] { color: purple; }.
+                        <br>
+                    Псевдоклассы: a:hover { color: yellow; }.
+                        <br>
+                    Свойства: Определяют аспекты стиля (например, color, font-size).
+                        <br>
+                    Значения: Задают параметры стиля (например, red, 16px).
+                </div>
+                <div class="grid-text_two">
+                    пример:
+                    <br>
+                    <br>
+                    p {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    color: blue;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    font-size: 16px;<br>
+                      }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Внедрение CSS
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    1. Встроенные стили: Через атрибут style.
+                    <br>
+                    <br>
+                    &lt;p style="color: blue;">Текст&lt;/p&gt;
+                    <br>
+                    <br>
+                    2. Внутренние стили: Внутри &lt;style&gt; в &lt;head&gt;.
+                    <br>
+                    <br>
+                    &lt;style&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    p { color: blue; }
+                        <br>
+                    &lt;/style&gt;
+                </div>
+                <div class="grid-text_two">
+                    3. Внешние стили: В отдельном файле, подключаемом через &lt;link&gt;.
+                    <br>
+                    <br>
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Модель коробки (Box Model)
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Content: Содержимое.
+                    <br>
+                    Padding: Внутренние отступы.
+                    <br>
+                    Border: Граница.
+                    <br>
+                    Margin: Внешние отступы.
+                </div>
+                <div class="grid-text_two">
+                    пример:
+                    <br>
+                    <br>
+                    .box {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    width: 200px;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    padding: 20px;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    border: 5px solid black;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    margin: 30px;
+                        <br>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Раскладка и позиционирование
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Flexbox
+                    <br>
+                    <br>
+                    Гибкая модель для выравнивания элементов.
+                    <br>
+                    <br>
+                    .container {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    display: flex;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    justify-content: space-between;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    align-items: center;
+                        <br>
+                      }
+                </div>
+                <div class="grid-text_two">
+                    Grid
+                    <br>
+                    <br>
+                    Двухмерная раскладка.
+                    <br>
+                    <br>
+                    .container {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    display: grid;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    grid-template-columns: repeat(3, 1fr);
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    gap: 10px;
+                        <br>
+                      }
+                      <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>
+                Позиционирование
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    position:
+                    <br>
+                    <br>
+                    static (по умолчанию).
+                    <br>
+                    relative (относительно себя).
+                    <br>
+                    absolute (относительно предка).
+                    <br>
+                    fixed (относительно окна).
+                    <br>
+                    sticky (гибрид relative и fixed).
+                    <br>
+                    float: Позволяет элементу "плавать".
+                </div>
+                <div class="grid-text_two">
+                    .element {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    position: absolute;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    top: 10px;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    left: 20px;
+                        <br>
+                      }
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>
+                Адаптивный дизайн и медиазапросы
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Медиазапросы позволяют адаптировать стили под разные устройства.
+                </div>
+                <div class="grid-text_two">
+                    @media (max-width: 600px) {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    .container {
+                            <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    flex-direction: column;
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>
+                      }
+                      <br>
+                      @media (min-width: 601px) and (max-width: 1200px) {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    .container {
+                            <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    flex-direction: row;
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>
+                      }
+                      <br>
+                      @media (min-width: 1201px) {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    .container {
+                            <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    flex-direction: row;
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>
+                      }
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+
+</script>
+</html>

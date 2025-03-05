@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс 2</title>
+    <style>
+        body{
+            max-width: 1440px;
+            margin: 0 auto;
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #B4B4B4;
+        }
+        header{
+            margin-top: 15px;
+            h1{
+                text-align: center;
+            }
+        }
+
+        main{
+            .container{
+                border: 2px solid #6C6C6C;
+                border-bottom: 0px;
+                h2{
+                    text-align: center;
+                    padding: 15px;
+                    
+                }
+                .grid{
+                    font-size: 18px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    .grid-text_one{
+                        padding: 15px;
+                        border: 2px solid #6C6C6C;
+                        border-left: 0px;
+                        border-right: 1px;
+                        border-bottom: 0px;
+                    }
+                    .grid-text_two{
+                        padding: 15px;  
+                        border: 2px solid #6C6C6C;
+                        border-right: 0px;
+                        border-bottom: 0px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1000px){
+            body{
+
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 300px;
+            }
+            h1{
+                font-size: 20px;
+            }
+        }
+
+        main{
+            .container{
+                h2{
+                    font-size: 18px;
+                    margin: 0;
+                }
+                .grid{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    .grid-text_one{
+                        
+                    }
+                    .grid-text_two{
+
+                    }
+                }
+            }
+        }
+        }
+        footer{
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./logo.svg" alt="logo">
+        <h1>Основы HTML</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>
+                HTML (HyperText Markup Language) — это язык разметки для создания веб-страниц. Он используется для структурирования контента.
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Основные теги HTML:
+                    <br>
+                    <br>
+                    &lt;html&gt;: Корневой элемент.
+                    <br>
+                    &lt;head&gt;: Метаинформация (заголовок, стили, скрипты).
+                    <br>
+                    &lt;title&gt;: Заголовок страницы.
+                    <br>
+                    &lt;body&gt;: Основной контент.
+                    <br>
+                    &lt;h1&gt;-&lt;h6&gt;: Заголовки.
+                    <br>
+                    &lt;p&gt;: Параграф.
+                    <br>
+                    &lt;a&gt;: Ссылка.
+                    <br>
+                    &lt;img&gt;: Изображение.
+                    <br>
+                    &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Списки.
+                </div>
+                <div class="grid-text_two">
+                    Базовая структура HTML:
+                    <br>
+                    <br>
+                    &lt;!DOCTYPE html&gt;
+                    <br>
+                    &lt;html lang="ru"&gt;
+                    <br>
+                    &lt;head&gt;
+                    <br>
+                    &lt;meta charset="UTF-8"&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;title&gt;Моя страница&lt;/title&gt;
+                        <br>
+                    &lt;/head&gt;
+                    <br>
+                    &lt;body&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;h1&gt;Добро пожаловать!&lt;/h1&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Пример текста.&lt;/p&gt;
+                        <br>
+                    &lt;/body&gt;
+                    <br>
+                    &lt;/html&gt;
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Семантические теги
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Семантические теги:
+                    <br>
+                    <br>
+                    &lt;header&gt;: Заголовок страницы/раздела.
+                    <br>
+                    &lt;footer&gt;: Нижний колонтитул.
+                    <br>
+                    &lt;article&gt;: Самостоятельный контент.
+                    <br>
+                    &lt;section&gt;: Раздел документа.
+                    <br>
+                    &lt;nav&gt;: Навигация.
+                    <br>
+                    &lt;aside&gt;: Дополнительный контент.
+                </div>
+                <div class="grid-text_two">
+                    премер: 
+                    <br>
+                    <br>
+                    &lt;header&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;h1&gt;Заголовок&lt;/h1&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;nav&gt;
+                        <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;ul&gt;
+                            <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href=""&gt;Главная&lt;/a&gt;&lt;/li&gt;
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href=""&gt;О нас&lt;/a&gt;&lt;/li&gt;
+                                <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;/ul&gt;
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;/nav&gt;
+                        <br>
+                    &lt;/header&gt;
+                    <br>
+                    &lt;main&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;article&gt;
+                        <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Статья&lt;/h2&gt;
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Текст...&lt;/p&gt;
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;/article&gt;
+                        <br>
+                    &lt;/main&gt;
+                    <br>
+                    &lt;footer&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Футер&lt;/p&gt;
+                        <br>
+                    &lt;/footer&gt;
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Формы
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Теги форм:
+                    <br>
+                    <br>
+                    &lt;form&gt;: Контейнер для формы.
+                    <br>
+                    &lt;input&gt;: Поле ввода.
+                    <br>
+                    &lt;textarea&gt;: Многострочный ввод.
+                    <br>
+                    &lt;select&gt;: Выпадающий список.
+                </div>
+                <div class="grid-text_two">
+                    премер: 
+                    <br>
+                    <br>
+                    &lt;form action="/submit" method="post"&gt;
+                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;input type="text" id="name" name="name" required&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;br&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;label for="email"&gt;Email:&lt;/label&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;input type="email" id="email" name="email" required&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;br&gt;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;    &lt;input type="submit" value="Отправить"&gt;
+                        <br>
+                    &lt;/form&gt;
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2>
+                Валидация форм
+            </h2>
+            <div class="grid">
+                <div class="grid-text_one">
+                    Теги для валидация форм:
+                    <br>
+                    <br>
+                    required: Обязательное поле.
+                    <br>
+                    pattern: Регулярное выражение для проверки.
+                    <br>
+                    minlength: Минимальная длина ввода.
+                </div>
+                <div class="grid-text_two">
+                    премер: 
+                    <br>
+                    <br>
+                    &lt;input type="text" id="username" name="username" required pattern="[A-Za-z]{3,}" title="Не менее 3 букв"&gt;
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+
+</script>
+</html>

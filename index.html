@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curius</title>
+</head>
+<style>
+    body{
+        max-width: 1440px;
+        margin: 0 auto;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #B4B4B4;    
+    }
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img{
+
+        }
+        ul{
+            padding: 0;
+            margin: 40px 0;
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            li{
+                
+                a{
+                    font-size: 24px;
+                    color: #B4B4B4;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    main{
+
+        .info{
+            margin: 0 auto;
+            max-width: 970px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid #6C6C6C;
+            border-bottom: 0;
+
+        }
+        .about{
+            h2{
+                margin: 0;
+                border: 2px solid #6C6C6C;
+                border-right: 0;
+                border-left: 0;
+                border-bottom: 0;
+                padding: 15px;
+            }
+            
+        }
+        .test-scroll{
+            border: 2px solid #6C6C6C;
+            ul{
+                margin: 0;
+                padding: 20px;
+                height: 400px;
+                overflow-y: auto; /* Вертикальный скроллбар */
+                overflow-x: hidden; /* Горизонтальный скроллбар скрыт */
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                li{
+                    border: 2px solid #6C6C6C;
+                    padding: 35px;
+                    list-style: none;
+                    font-size: 28px;
+                    a{
+                        text-decoration: none;
+                        color: #B4B4B4;
+                    }
+                }
+            }
+            
+            
+        }
+        .reviews{
+            h2{
+                text-align: center;
+                font-size: 32px;
+            }
+            ul{
+                justify-content: center;
+                padding:0 82px;
+                display: grid;
+                grid-template-columns: 285px 285px 285px 285px;
+                gap: 45px;
+                li{
+                    padding: 20px;
+                    border: 2px solid #6C6C6C;
+                    list-style: none;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        padding: 36px;
+        border: 2px solid #6C6C6C; 
+        .left{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 300px;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin-left: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1316px){
+        main{
+            .reviews{
+            h2{
+
+            }
+            ul{
+                padding:0 41px;
+                display: grid;
+                grid-template-columns: 285px 285px 285px;
+                gap: 45px;
+                li{
+
+                }
+            }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        body{
+
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 300px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            ul{
+            padding: 0;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 15px;
+            li{
+                text-align: center;
+                
+                a{
+                    font-size: 24px;
+                    color: #B4B4B4;
+                    text-decoration: none;
+                }
+            }
+        }
+        }
+        main{
+            .reviews{
+            h2{
+
+            }
+            ul{
+                padding:0 10px;
+                display: grid;
+                grid-template-columns: 285px 285px;
+                gap: 45px;
+                li{
+
+                }
+            }
+            }
+        }
+
+    }
+    @media (max-width: 610px){
+        header{
+            ul{
+                gap: 5px;
+                li{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        main{
+            .info{
+                padding: 15px;
+                font-size: 20px;
+            }
+            .about{
+                h2{
+                    font-size: 18px;
+                }
+                
+            }
+            .test-scroll{
+                border: 2px solid #6C6C6C;
+                ul{
+                    margin: 0;
+                    padding: 10px;
+                    height: 200px;
+                    gap: 15px;
+                    li{
+                        border: 2px solid #6C6C6C;
+                        padding: 15px;
+                        list-style: none;
+                        font-size: 18px;
+                        a{
+                            text-decoration: none;
+                            color: #B4B4B4;
+                        }
+                    }
+                }
+            }
+            .reviews{
+            h2{
+                font-size: 20px;
+            }
+            ul{
+                
+                padding:0 10px;
+                display: grid;
+                grid-template-columns: 285px;
+                gap: 15px;
+                li{
+                    font-size: 18px;
+                }
+            }
+            }
+        }
+        footer{
+        padding: 0;
+        .left{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                margin:  0 auto;
+                width: 250px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            ul{
+                text-align: center;
+                margin: 0;
+                gap: 5px;
+                li{
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+    }
+</style>
+<body>
+    <header>
+        <img src="./logo.svg" alt="logo">
+        <ul class="nav">
+            <li class="nav-item"><a href="#about" target="_blank">Описание</a></li>
+            <li class="nav-item"><a href="#test" target="_blank">Курсы</a></li>
+            <li class="nav-item"><a href="#reviews" target="_blank">Отзывы</a></li>
+            <li class="nav-item"><a href="#contact" target="_blank">Контакты</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1 class="info">
+            Информация
+        </h1>
+        <div class="about" id="about">
+            <h2>
+                мы поможем вам изучить HTML, CSS, JS, GIT.
+            </h2>
+            <h2>
+                Освойте основы веб-разработки с нами! Изучите HTML для создания структуры сайтов, CSS для стилизации, JavaScript для интерактивности и Git для контроля версий. Наши уроки помогут вам стать уверенным разработчиком и создать свои первые проекты. Начните свой путь в IT уже сегодня!
+            </h2>
+        </div>
+        <div class="test-scroll" id="test">
+            <ul>
+                <li><a href="./test1.html">1. Введение в веб-разработку</a></li>
+                <li><a href="./test2.html">2. Основы HTML</a></li>
+                <li><a href="./test3.html">3. Основы CSS</a></li>
+            </ul>
+        </div>
+        <div class="reviews" id="reviews">
+            <h2>Отзывы</h2>
+            <ul>
+                <li>Влад Балышев: Отличный курс! Всё объясняется доступно, много практики, и после обучения реально получается делать крутые сайты. Спасибо авторам!</li>
+                <li>Сергей Сычев: Очень полезно! Прошёл курс по HTML и CSS — теперь уверенно верстаю. Понравилась структура уроков и примеры. Рекомендую!</li>
+                <li>Егор Шпак: Лучший старт в веб-разработке! Информация подаётся просто и понятно, даже сложные темы объясняются легко, не жалею!</li>
+                <li>Сергей Кодаков: Качественное обучение! Отличные курсы для начинающих и не только. Много практики, актуальный материал, хорошая подача. Всё супер!</li>
+            </ul>
+        </div>
+    </main>
+    <footer id="contact">
+        <div class="left">
+            <img src="./logo.svg" alt="logo">
+            <ul>
+                <li>Менеджер: +7 (908)-***-**-**</li>
+                <li>Директор: +7 (908)-***-**-**</li>
+                <li>Подать заявку на размешение курса: +7 (908)-***-**-**</li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
+</html>
